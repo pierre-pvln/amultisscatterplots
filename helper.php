@@ -1,7 +1,7 @@
 <?php 
 /**
- * @package     mod_ipheionbargraphs
- * @author      Pierre Veelen, www.pvln.nl
+ * @package     mod_amultiscatterplots
+ * @author      Pierre Veelen, amultis.dev
  * @copyright   Copyright (C) 2020 Pierre Veelen. All rights reserved.
  * @license     GNU General Public License version 2 or later.
  */
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
  * Helper for mod_ipheionbargraphs
  */
 
-abstract class ModIpheionBarGraphsHelper
+abstract class ModaMultisScatterplotsHelper
 {
     /**
      * The class ModIpheionBarGraphsHelper gets a list of all installed extensions of this Joomla! website

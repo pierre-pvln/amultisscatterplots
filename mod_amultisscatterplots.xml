@@ -19,7 +19,7 @@
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.0.1</version>
+    <version>0.0.1.2</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_AMULTISSCATTERPLOTS_XML_DESCRIPTION</description>
@@ -43,6 +43,13 @@
 		<folder>js</folder>
 	</media>
 
+	<languages folder="language">
+		<language tag="nl-NL">nl-NL/nl-NL.mod_amultisscatterplots.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_amultisscatterplots.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_amultisscatterplots.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_amultisscatterplots.sys.ini</language>
+	</languages>
+
     <!-- additional fields to be configured in joomla back-end for this module-->  
     <config>
     <fields name="params" >
@@ -50,31 +57,31 @@
             <field name="moduleclass_sfx"
                 type="text"
                 label="Module Class Suffix"
-                description="MOD_AMULTISSCATTERPLOTS_CLASS_SUFFIX"
+                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_CLASS_SUFFIX"
             />
             <field name="pretext" 
                 type="textarea"
                 label="Pre Text"
-                description="MOD_AMULTISSCATTERPLOTS_PRETEXT"
+                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_PRETEXT"
                 cols="30"
                 rows="5"
             />
             <field name="posttext"
                 type="textarea"
                 label="Post Text"
-                description="MOD_AMULTISSCATTERPLOTS_POSTTEXT"
+                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_POSTTEXT"
                 cols="30"
                 rows="5"
             />
             <field name="visualisation_data_url"
                 type="text"
                 label="Visualisation Data url"
-                description="MOD_AMULTISSCATTERPLOTS_VISUALISATION_DATA_URL">
+                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_VISUALISATION_DATA_URL">
             </field>
 			<field name="graph_title_text"
                 type="text"
                 label="Title of the graph"
-                description="MOD_AMULTISSCATTERPLOTS_GRAPH_TITLE_TEXT">
+                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT">
             </field>
         </fieldset>
     </fields>
