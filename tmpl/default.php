@@ -1,14 +1,17 @@
 <?php 
 /**
  * @package     mod_amultisscatterplots
- * @author      Pierre Veelen, www.pvln.nl
- * @copyright   Copyright (C) 2020 Pierre Veelen. All rights reserved.
+ * @author      Pierre Veelen, amultis.eu
+ * @copyright   Copyright (C) 2023 Pierre Veelen. All rights reserved.
  * @license     GNU General Public License version 2 or later.
  *
  * default.php  Used to output the data to html page.
  *
  */
 
+/*
+ * No direct access to this file
+ */
 defined('_JEXEC') or die;
 
 /* $document = JFactory::getDocument(); */

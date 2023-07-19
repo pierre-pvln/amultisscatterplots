@@ -1,15 +1,21 @@
 <?php 
 /**
  * @package     mod_amultisscatterplots
- * @author      Pierre Veelen, www.pvln.nl
- * @copyright   Copyright (C) 2020 Pierre Veelen. All rights reserved.
+ * @author      Pierre Veelen, amulits.eu
+ * @copyright   Copyright (C) 2023 Pierre Veelen. All rights reserved.
  * @license     GNU General Public License version 2 or later.
  */
 
+/*
+ * No direct access to this file
+ */
 defined('_JEXEC') or die;
 
-/* Include dependencies; include helper.php */
-	require_once __DIR__ . '/helper.php';
+/*
+ * Import ModuleHelper to our current scope at the begin of the file. 
+ * We need it later for displaying the output.
+ */
+use Joomla\CMS\Helper\ModuleHelper;
 
 /**
  * Retrieve the installed extensions of the Joomla! website in $list
@@ -34,6 +40,5 @@ defined('_JEXEC') or die;
  * Output depends if the layout has not been overridden or not. 
  * 
  */
-	require JModuleHelper::getLayoutpath('mod_amultisscatterplots', $layout);
-	
+	require ModuleHelper::getLayoutpath('mod_amultisscatterplots', $layout);
 ?>

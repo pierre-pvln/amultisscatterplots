@@ -3,7 +3,7 @@
 <!-- basic information of the extension -->
 <!-- more info: https://docs.joomla.org/Manifest_files/nl -->
 <extension
-    version="3.0" 
+    version="4.0" 
     type="module"
 	client="site"
 	method="upgrade">
