@@ -14,12 +14,12 @@
     <author>Pierre Veelen</author>
     <authorEmail>pierre@amultis.eu</authorEmail>
     <authorUrl>https://amulits.dev/amultisscatterplots</authorUrl>
-    <creationDate>29 June 2023</creationDate>
+    <creationDate>20 July 2023</creationDate>
     <copyright>Copyright (C) 2023 by Pierre Veelen. All rights reserved.</copyright>
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.2</version>
+    <version>0.0.1.4</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_AMULTISSCATTERPLOTS_XML_DESCRIPTION</description>
@@ -52,49 +52,49 @@
 
     <!-- additional fields to be configured in joomla back-end for this module-->  
     <config>
-    <fields name="params" >
-        <fieldset name="advanced" >
-            <field name="moduleclass_sfx"
-                type="text"
-                label="Module Class Suffix"
-                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_CLASS_SUFFIX"
-            />
-            <field name="pretext" 
-                type="textarea"
-                label="Pre Text"
-                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_PRETEXT"
-                cols="30"
-                rows="5"
-            />
-            <field name="posttext"
-                type="textarea"
-                label="Post Text"
-                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_POSTTEXT"
-                cols="30"
-                rows="5"
-            />
-            <field name="visualisation_data_url"
-                type="text"
-                label="Visualisation Data url"
-                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_VISUALISATION_DATA_URL">
-            </field>
-			<field name="graph_title_text"
-                type="text"
-                label="Title of the graph"
-                description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT">
-            </field>
-        </fieldset>
-    </fields>
+		<fields name="params" >
+			<fieldset name="advanced" >
+				<field name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_CLASS_SUFFIX"
+				/>
+				<field name="pretext" 
+					type="textarea"
+					label="Pre Text"
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_PRETEXT"
+					cols="30"
+					rows="5"
+				/>
+				<field name="posttext"
+					type="textarea"
+					label="Post Text"
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_POSTTEXT"
+					cols="30"
+					rows="5"
+				/>
+				<field name="visualisation_data_url"
+					type="text"
+					label="Visualisation Data url"
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_VISUALISATION_DATA_URL">
+				</field>
+				<field name="graph_title_text"
+					type="text"
+					label="Title of the graph"
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT">
+				</field>
+			</fieldset>
+		</fields>
     </config>
 
-    <!-- configuration for update servers-->
+    <!-- configuration for update server(s)-->
     <updateservers>
         <server
             type="extension"
             priority="1"
-            name="Updates for aMultis ScatterPlots module">
-            http://update.amultis.dev/joomla/modules/amultisscatterplots/mod_amultisscatterplots.xml
+            name="Updates for aMultis ScatterPlots module on update.amultis.dev">
+            https://update.amultis.dev/joomla/modules/amultisscatterplots/mod_amultisscatterplots.xml
         </server>
-
     </updateservers>
+
 </extension>
