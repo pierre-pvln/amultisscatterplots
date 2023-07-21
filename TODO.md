@@ -1,0 +1,1 @@
+- checksum toevoegen zodat auto update geen warning meer geeft

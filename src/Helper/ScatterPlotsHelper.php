@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /**
  * @package     mod_amultiscatterplots
  * @author      Pierre Veelen, amultis.dev
@@ -6,16 +7,20 @@
  * @license     GNU General Public License version 2 or later.
  */
  
-defined('_JEXEC') or die;
+namespace aMultisNamespace\Module\ScatterPlots\Site\Helper;
+
+use Joomla\CMS\Factory;
+
+\defined('_JEXEC') or die;
 
 /**
- * Helper for mod_ipheionbargraphs
+ * Helper for mod_amultiscatterplots
+ *
  */
-
-abstract class ModaMultisScatterplotsHelper
+class ScatterPlotsHelper
 {
-    /**
-     * The class ModIpheionBarGraphsHelper gets a list of all installed extensions of this Joomla! website
+	/**
+     * The class ScatterPlotsHelper gets a list of all installed extensions of this Joomla! website
      *
      **/
 	 
@@ -35,7 +40,7 @@ abstract class ModaMultisScatterplotsHelper
     	 **/
     	
 		/* Get a db connection */
-		$db = JFactory::getDbo();
+        $db = Factory::getDbo();
 
 		/* Create a new query object. */
 		$query = $db->getQuery(true);
@@ -55,4 +60,3 @@ abstract class ModaMultisScatterplotsHelper
 		return $list;
     }
 }
-?>

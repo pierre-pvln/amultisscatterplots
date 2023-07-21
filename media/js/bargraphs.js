@@ -12,7 +12,7 @@ jQuery.get(visualisation_data_url,
 			},
 
 			subtitle: {
-				text: 'Number and type of ships per day'
+				text: graph_subtitle_text
 			},
 			
 			xAxis: {

@@ -13,27 +13,34 @@
     <!-- The following metadata elements are optional and free of formatting constraints -->
     <author>Pierre Veelen</author>
     <authorEmail>pierre@amultis.eu</authorEmail>
-    <authorUrl>https://amulits.dev/amultisscatterplots</authorUrl>
+    <authorUrl>https://amulits.dev/scatterplots</authorUrl>
     <creationDate>20 July 2023</creationDate>
     <copyright>Copyright (C) 2023 by Pierre Veelen. All rights reserved.</copyright>
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.4</version>
+    <version>0.0.1.11</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_AMULTISSCATTERPLOTS_XML_DESCRIPTION</description>
 
-	<!-- the internal name of the component. If omitted, name will be cleaned and used -->
-	<element>amultisscatterplots</element>
+    <!-- An optional script file (PHP code that is run before, during and/or after installation, uninstallation and upgrading -->
+    <scriptfile>script.php</scriptfile>
+	
+	<!-- namespace to be used for autoloading the plugin. -->
+    <namespace path="src">aMultisNamespace\Module\ScatterPlots</namespace>
+		
+	<!-- the internal name of the component. If omitted, <name> will be cleaned and used -->
+	<!-- Should be the name of of the module otherwise we get an "xml not found error" in backend after a successful install -->  
+	<element>mod_amultisscatterplots</element>
 	
     <!-- files and folders used by this module -->
     <files>
         <filename module="mod_amultisscatterplots">mod_amultisscatterplots.php</filename>
         <filename>mod_amultisscatterplots.xml</filename>
-        <filename>helper.php</filename>
         <filename>index.html</filename>
         <folder>tmpl</folder>
+        <folder>src</folder>
         <folder>language</folder>
     </files>
 	
@@ -82,6 +89,12 @@
 					type="text"
 					label="Title of the graph"
 					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT">
+				<field name="graph_subtitle_text"
+					type="text"
+					label="Subtitle of the graph"
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_SUBTITLE_TEXT">
+				</field>
+
 				</field>
 			</fieldset>
 		</fields>
@@ -93,7 +106,7 @@
             type="extension"
             priority="1"
             name="Updates for aMultis ScatterPlots module on update.amultis.dev">
-            https://update.amultis.dev/joomla/modules/amultisscatterplots/mod_amultisscatterplots.xml
+            https://update.amultis.dev/joomla/modules/scatterplots/mod_scatterplots.xml
         </server>
     </updateservers>
 

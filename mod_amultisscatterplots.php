@@ -1,21 +1,30 @@
-<?php 
+<?php
+ 
 /**
  * @package     mod_amultisscatterplots
- * @author      Pierre Veelen, amulits.eu
+ * @author      Pierre Veelen, amulits.dev
  * @copyright   Copyright (C) 2023 Pierre Veelen. All rights reserved.
  * @license     GNU General Public License version 2 or later.
  */
 
 /*
  * No direct access to this file
+ * - \defined checks global namespace 
+ * - defined checks local namespace
  */
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 /*
  * Import ModuleHelper to our current scope at the begin of the file. 
  * We need it later for displaying the output.
  */
 use Joomla\CMS\Helper\ModuleHelper;
+
+/*
+ * Import Helper to our current scope at the begin of the file. 
+ * We need it later for displaying the output.
+ */
+use aMultisNamespace\Module\ScatterPlots\Site\Helper\ScatterPlotsHelper;
 
 /**
  * Retrieve the installed extensions of the Joomla! website in $list
@@ -24,7 +33,7 @@ use Joomla\CMS\Helper\ModuleHelper;
  * 			Not used in this one yet (for future use).
  *
  */
-	$list = ModaMultisScatterPlotsHelper::getItems($params);
+	$list = ScatterPlotsHelper::getItems($params);
  	
 /**
  * Get layout values from back-end setting tab advanced in $params 

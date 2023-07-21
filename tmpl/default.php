@@ -1,4 +1,5 @@
 <?php 
+
 /**
  * @package     mod_amultisscatterplots
  * @author      Pierre Veelen, amultis.eu
@@ -11,14 +12,19 @@
 
 /*
  * No direct access to this file
+ * - \defined checks global namespace 
+ * - defined checks local namespace
  */
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
+
+use Joomla\CMS\HTML\HTMLHelper;
+
+HTMLHelper::_('jquery.framework');
 
 /* $document = JFactory::getDocument(); */
 /* $document->addScript('https://code.highcharts.com/highcharts.js'); */
 
 ?>
-
 <!-- Get the module class suffix-->
 <div class="<?php echo $params->get("moduleclass_sfx");?>">
 
@@ -34,6 +40,7 @@ defined('_JEXEC') or die;
 	<script>
 		visualisation_data_url = <?php echo '"'.$params->get("visualisation_data_url").'"' ?>;
 		graph_title_text = <?php echo '"'.$params->get("graph_title_text").'"' ?>;
+		graph_subtitle_text = <?php echo '"'.$params->get("graph_subtitle_text").'"' ?>;
     </script>
 	
 	<!-- load graph -->

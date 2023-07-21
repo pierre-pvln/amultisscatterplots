@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+	<!-- See also https://docs.joomla.org/Adding_changelog_to_your_manifest_file -->
+    <changelog>
+        <element>mod_amultisscatterplots</element>
+        <type>module</type>
+        <version>0.0.1.11</version>
+        <change>
+            <item>Added graph substitle</item>
+        </change>
+		<language>
+            <item>Added graph substitle</item>
+        </language>
+	</changelog>
+
+    <changelog>
+        <element>mod_amultisscatterplots</element>
+        <type>module</type>
+        <version>0.0.1.10</version>
+        <change>
+            <item>Updated Helper</item>
+            <item>an other Item</item>
+        </change>
+		<language>
+            <item>Tekst aangepast</item>
+        </language>
+        <note>
+            <item>Some note to user</item>
+        </note>
+	</changelog>
+
+
+    <changelog>
+        <element>com_lists</element>
+        <type>component</type>
+        <version>4.0.0</version>
+        <security>
+            <item>Item A</item>
+            <item><![CDATA[<h2>You MUST replace this file</h2>]]></item>
+        </security>
+        <fix>
+            <item>Item A</item>
+            <item>Item b</item>
+        </fix>
+        <language>
+            <item>Item A</item>
+            <item>Item b</item>
+        </language>
+        <addition>
+            <item>Item A</item>
+            <item>Item b</item>
+        </addition>
+        <change>
+            <item>Item A</item>
+            <item>Item b</item>
+        </change>
+        <remove>
+            <item>Item A</item>
+            <item>Item b</item>
+        </remove>
+        <note>
+            <item>Item A</item>
+            <item>Item b</item>
+        </note>
+	</changelog>
+	
+	<changelog>
+		<element>com_lists</element>
+		<type>component</type>
+		<version>0.0.2</version>
+		<security>
+			<item>Big issue</item>
+		</security>
+	</changelog>
+
+</changelogs>
