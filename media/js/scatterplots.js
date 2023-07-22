@@ -2,7 +2,7 @@ jQuery.get(visualisation_data_url,
 		function (data, textStatus) {
           // https://api.highcharts.com/class-reference/Highcharts.Chart
 		  // 
-		  Highcharts.chart('map-bargraph', {
+		  Highcharts.chart(DOM_element, {
 			chart: {
 				type: 'column',
 				zoomType: 'x',

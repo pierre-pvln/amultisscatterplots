@@ -14,12 +14,12 @@
     <author>Pierre Veelen</author>
     <authorEmail>pierre@amultis.eu</authorEmail>
     <authorUrl>https://amulits.dev/scatterplots</authorUrl>
-    <creationDate>20 July 2023</creationDate>
+    <creationDate>22 July 2023</creationDate>
     <copyright>Copyright (C) 2023 by Pierre Veelen. All rights reserved.</copyright>
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.11</version>
+    <version>0.0.1.26</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_AMULTISSCATTERPLOTS_XML_DESCRIPTION</description>
@@ -89,12 +89,11 @@
 					type="text"
 					label="Title of the graph"
 					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT">
+				</field>
 				<field name="graph_subtitle_text"
 					type="text"
 					label="Subtitle of the graph"
 					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_SUBTITLE_TEXT">
-				</field>
-
 				</field>
 			</fieldset>
 		</fields>
