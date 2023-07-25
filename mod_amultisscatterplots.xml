@@ -19,7 +19,7 @@
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.57</version>
+    <version>0.0.1.65</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_AMULTISSCATTERPLOTS_XML_DESCRIPTION</description>
@@ -83,17 +83,22 @@
 				<field name="visualisation_data_url"
 					type="text"
 					label="Visualisation Data url"
-					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_VISUALISATION_DATA_URL">
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_VISUALISATION_DATA_URL"
+					hint="https://cdn.jsdelivr.net/gh/highcharts/highcharts@24912efc85/samples/data/olympic2012.json" >
 				</field>
 				<field name="graph_title_text"
 					type="text"
 					label="Title of the graph"
-					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT">
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT"
+					hint=""
+					filter="raw"> <!-- allows for html tags https://docs.joomla.org/Textarea_form_field_type -->
 				</field>
 				<field name="graph_subtitle_text"
 					type="text"
 					label="Subtitle of the graph"
-					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_SUBTITLE_TEXT">
+					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_SUBTITLE_TEXT"
+					hint='Source: <a href="https://www.theguardian.com/sport/datablog/2012/aug/07/olympics-2012-athletes-age-weight-height">The Guardian</a>'
+					filter="raw"> <!-- allows for html tags https://docs.joomla.org/Textarea_form_field_type -->
 				</field>
 			</fieldset>
 		</fields>

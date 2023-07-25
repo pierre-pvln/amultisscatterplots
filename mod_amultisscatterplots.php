@@ -33,20 +33,13 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 HTMLHelper::_('jquery.framework');
 
-/*
- * Import Helper to our current scope at the begin of the file. 
- * We need it later for displaying the output.
- */
-//use aMultisNamespace\Module\ScatterPlots\Site\Helper\ScatterPlotsHelper;
-
 /**
- * Retrieve the installed extensions of the Joomla! website in $list
- *
- * @params	An object containing the module parameters as set in the back-end for the module;
- * 			Not used in this one yet (for future use).
+ * Load the generic highcharts.js graphs library
  *
  */
-//$list = ScatterPlotsHelper::getItems($params);
+$document = Factory::getDocument();
+$document->addScript('https://code.highcharts.com/highcharts.js');
+$document->addScript('./media/mod_amultisscatterplots/js/scatterplots.js');
 
 /**
  * Get layout values from back-end setting tab advanced in $params 
@@ -58,21 +51,9 @@ HTMLHelper::_('jquery.framework');
 $layout = $params->get('layout','default');
 
 /**
- * Load the generic highcharts.js graphs library
- *
- */
-$document = Factory::getDocument();
-$document->addScript('https://code.highcharts.com/highcharts.js');
-$document->addScript('./media/mod_amultisscatterplots/js/scatterplots.js');
-
-/**
  * This method returns the path to the layout file for the module.
  * Output depends if the layout has not been overridden or not. 
  * 
  */
 require ModuleHelper::getLayoutpath('mod_amultisscatterplots', $layout);
-
-echo "<div id=debug-dummy-id-1>Einde van php deel mod_amultisscatterplots.php</div>";
-
 ?>
-<div id=debug-dummy-id-2>Einde van html deel mod_amultisscatterplots.php</div>
