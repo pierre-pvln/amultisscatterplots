@@ -63,6 +63,7 @@ $layout = $params->get('layout','default');
  */
 $document = Factory::getDocument();
 $document->addScript('https://code.highcharts.com/highcharts.js');
+$document->addScript('./media/mod_amultisscatterplots/js/scatterplots.js');
 
 /**
  * This method returns the path to the layout file for the module.

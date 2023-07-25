@@ -11,10 +11,10 @@ if(options.length !== 0) {
   console.log('options array not empty');
   for (i in options) {
 	// Access individual options
-	var visualisation_data_url = options[i].visualisation_data_url;
-	var graph_title_text = options[i].graph_title_text;
-	var graph_subtitle_text = options[i].graph_subtitle_text;
-	var module_id_name = options[i].module_id_name;
+	let visualisation_data_url = options[i].visualisation_data_url;
+	let graph_title_text = options[i].graph_title_text;
+	let graph_subtitle_text = options[i].graph_subtitle_text;
+	let module_id_name = options[i].module_id_name;
 
 	console.log('3= scatterplots.js ==');
 	console.log(visualisation_data_url);
@@ -23,6 +23,9 @@ if(options.length !== 0) {
 	console.log(module_id_name);
 	console.log('4= scatterplots.js ==');
 
+	/* Inspiration: https://www.highcharts.com/docs/getting-started/how-to-set-options#global-options
+	 * If you want to apply a set of options to all charts on the same page, use Highcharts.setOptions like shown below. 
+	 */
 	Highcharts.setOptions({
 		colors: ['rgba(5,141,199,0.5)', 'rgba(80,180,50,0.5)', 'rgba(237,86,27,0.5)']
 	});
@@ -52,8 +55,8 @@ if(options.length !== 0) {
 	// get the data asynchronous
 	async function getData() {
 		const response = await fetch(
-	//      visualisation_data_url
-			'https://cdn.jsdelivr.net/gh/highcharts/highcharts@24912efc85/samples/data/olympic2012.json'
+	        visualisation_data_url
+	//		'https://cdn.jsdelivr.net/gh/highcharts/highcharts@24912efc85/samples/data/olympic2012.json'
 		);
 		return response.json();
 	}
@@ -68,11 +71,17 @@ if(options.length !== 0) {
 			});
 			return temp;
 		};
+		
 		series.forEach(s => {
 			s.data = getData(s.id);
 		});
+        console.log(series)
 
-		Highcharts.chart(module_id_name, {
+		/* Inspiration https://stackoverflow.com/questions/762011/what-is-the-difference-between-let-and-var
+		 * 
+		 * Using let to define unique value; with each iteration you get a new variable (see Loops with closures in inspiration) 
+		 */
+		let scatter_chart = Highcharts.chart(module_id_name, {
 			chart: {
 				type: 'scatter',
 				zoomType: 'xy'
@@ -145,71 +154,3 @@ if(options.length !== 0) {
 };
 
 
-/*
-jQuery.get(visualisation_data_url,
-		function (data, textStatus) {
-          // https://api.highcharts.com/class-reference/Highcharts.Chart
-		  // 
-		  Highcharts.chart(module_id_name, {
-			chart: {
-				type: 'column',
-				zoomType: 'x',
-				backgroundColor: '#F2F4F8',
-			},
-			
-			title: {
-				text: graph_title_text
-			},
-
-			subtitle: {
-				text: graph_subtitle_text
-			},
-			
-			xAxis: {
-				type: 'datetime',
-				labels: {
-					rotation: -45
-				},
-				TickInterval: 24 * 60 * 60 * 1000 // 1 day
-			  },
-
-			yAxis: {
-				title: {
-				  text: 'Number of ships'
-				},				
-			},				
-
-			tooltip: {
-				formatter: function() {
-				  var stackName = this.series.userOptions.stack;
-				  return '<b>' + stackName + '</b><br/><b>' + Highcharts.dateFormat('%d %b %Y', this.x) + '</b><br/>' +
-					this.series.name + ': ' + this.y + '<br/>' +
-					'Total: ' + this.point.stackTotal;
-				}
-			
-			},
-			
-			legend: {
-				labelFormatter: function() {
-				  return this.name + ' (' + this.userOptions.stack + ')';
-				}
-			},
-			
-			plotOptions: {
-				column: {
-					stacking: 'normal'
-					},
-					
-				series: {
-					marker: {
-						enabled: false
-					}
-				}
-
-			},
-
-			series: data
-			});
-		}
-	);
-*/

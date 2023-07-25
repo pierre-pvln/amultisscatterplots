@@ -1,0 +1,11 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# 2023-07-25 Joomla Settings for files 
+# https://developer.joomla.org/coding-standards/basic-guidelines.html
+*.xml text eol=cr
+*.php text eol=cr
+*.js text eol=cr
+*.css text eol=cr
+*.htm text eol=cr
+*.html text eol=cr
