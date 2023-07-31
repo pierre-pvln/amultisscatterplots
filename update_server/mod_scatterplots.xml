@@ -21,13 +21,13 @@
 		<targetplatform name="joomla" version="4" />
 		
 		<!-- The version of the release -->
-		<version>0.0.1.65</version>
+		<version>0.0.1.78</version>
 		
-		<!-- A link to an xml file holding the changelog. -->
+		<!-- A link to the xml file holding the changelog. -->
 		<changelogurl>https://update.amultis.dev/joomla/modules/scatterplots/changelog.xml</changelogurl>
 		
 		<downloads>
-			<downloadurl type="upgrade" format="zip">https://download.amultis.dev/joomla/modules/scatterplots/mod_scatterplots_v0.0.1.65.zip</downloadurl>
+			<downloadurl type="upgrade" format="zip">https://download.amultis.dev/joomla/modules/scatterplots/mod_scatterplots_v0.0.1.78.zip</downloadurl>
 		</downloads>
 		
         <!-- === OPTIONAL TAG ELEMENTS == -->

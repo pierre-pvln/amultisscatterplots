@@ -14,12 +14,12 @@
     <author>Pierre Veelen</author>
     <authorEmail>pierre@amultis.eu</authorEmail>
     <authorUrl>https://amulits.dev/scatterplots</authorUrl>
-    <creationDate>25 July 2023</creationDate>
+    <creationDate>28 July 2023</creationDate>
     <copyright>Copyright (C) 2023 by Pierre Veelen. All rights reserved.</copyright>
     <license>GNU General Public License version 2</license>
 
     <!--  The version string for this extension; is recorded in the #__extensions table -->
-    <version>0.0.1.65</version>
+    <version>0.0.1.78</version>
 
     <!-- The description is optional and defaults to the name; translatable field -->
     <description>MOD_AMULTISSCATTERPLOTS_XML_DESCRIPTION</description>
@@ -45,9 +45,10 @@
     </files>
 	
 	<!-- files and folders used by this module -->
-	<!-- in folder media are put in \media\mod_amultisscatterplots\ -->
+	<!-- files and folders in folder media are put in <SITEROOT>\media\mod_amultisscatterplots\ -->
 	<media folder="media" destination="mod_amultisscatterplots">
 		<folder>js</folder>
+		<folder>tst-data</folder>
 	</media>
 
 	<languages folder="language">
@@ -57,7 +58,8 @@
 		<language tag="en-GB">en-GB/en-GB.mod_amultisscatterplots.sys.ini</language>
 	</languages>
 
-    <!-- additional fields to be configured in joomla back-end for this module-->  
+    <!-- additional fields to be configured in joomla back-end for this module --> 
+	<!-- filter="raw" allows for html tags see https://docs.joomla.org/Textarea_form_field_type -->
     <config>
 		<fields name="params" >
 			<fieldset name="advanced" >
@@ -84,25 +86,25 @@
 					type="text"
 					label="Visualisation Data url"
 					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_VISUALISATION_DATA_URL"
-					hint="https://cdn.jsdelivr.net/gh/highcharts/highcharts@24912efc85/samples/data/olympic2012.json" >
-				</field>
+				/>
 				<field name="graph_title_text"
 					type="text"
 					label="Title of the graph"
 					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_TITLE_TEXT"
-					hint=""
-					filter="raw"> <!-- allows for html tags https://docs.joomla.org/Textarea_form_field_type -->
-				</field>
+					filter="raw"
+				/>
 				<field name="graph_subtitle_text"
 					type="text"
 					label="Subtitle of the graph"
 					description="MOD_AMULTISSCATTERPLOTS_PARAMS_MSG_GRAPH_SUBTITLE_TEXT"
-					hint='Source: <a href="https://www.theguardian.com/sport/datablog/2012/aug/07/olympics-2012-athletes-age-weight-height">The Guardian</a>'
-					filter="raw"> <!-- allows for html tags https://docs.joomla.org/Textarea_form_field_type -->
-				</field>
+					filter="raw"
+				/>
 			</fieldset>
 		</fields>
     </config>
+
+    <!-- A link to the xml file holding the changelog. -->
+	<changelogurl>https://update.amultis.dev/joomla/modules/scatterplots/changelog.xml</changelogurl>
 
     <!-- configuration for update server(s)-->
     <updateservers>
